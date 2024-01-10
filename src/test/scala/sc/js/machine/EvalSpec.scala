@@ -3,9 +3,8 @@ package scsc.js.machine
 import org.scalatest._
 
 class EvalSpec extends FlatSpec with Matchers {
-  import scsc.js.JS._
-  import scsc.js.Eval
-  import terms._
+  import sc.js.machine.JS._
+  import sc.js.machine.Eval
 
   "JS" should "eval number literals" in {
     val e = Parser.fromString("8")

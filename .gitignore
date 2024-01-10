@@ -4,3 +4,6 @@ target/
 *.broken
 .DS_Store
 .classpath
+.metals
+.history
+.vscode

@@ -16,6 +16,7 @@ lazy val root = (project in file("."))
 
     // don't run tests in parallel... nashorn parser gets confused
     parallelExecution in Test := false,
+    testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-oD"),
 
     resolvers += Resolver.sonatypeRepo("releases"),
     resolvers += Resolver.sonatypeRepo("snapshots"),
@@ -40,5 +41,5 @@ lazy val jsaiProject =
 */
 
 lazy val jsaiProject =
-  ProjectRef(file("jsai"), "jsai")
+  ProjectRef(file("../jsai-romanenko"), "jsai-romanenko")
 

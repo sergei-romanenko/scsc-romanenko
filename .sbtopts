@@ -2,3 +2,4 @@
 -J-XX:+UseConcMarkSweepGC
 -J-XX:+CMSClassUnloadingEnabled
 -J-Xss4M
+-java-home /usr/lib/jvm/java-8-openjdk-amd64/
