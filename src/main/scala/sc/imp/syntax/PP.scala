@@ -1,5 +1,7 @@
 package sc.imp.syntax
 
+import scala.language.implicitConversions
+
 class PP[T <: Trees](val trees: T) {
   import trees._
 

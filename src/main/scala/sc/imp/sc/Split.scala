@@ -1,5 +1,7 @@
 package sc.imp.sc
 
+import scala.language.reflectiveCalls
+
 import sc.core.sc.Unsplit._
 
 trait Split extends sc.core.sc.Split with CoSplit with EvSplit with Rollback {

@@ -6,4 +6,4 @@ target/
 .classpath
 .metals
 .history
-.vscode
+.bsp

@@ -1,5 +1,7 @@
 package sc.js.sc
 
+import scala.language.reflectiveCalls
+
 import sc.core.sc.Unsplit._
 
 import sc.imp.{sc => imp}

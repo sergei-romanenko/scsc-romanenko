@@ -1,7 +1,8 @@
 lazy val root = (project in file("."))
   .dependsOn(jsaiProject)
   .settings(
-    scalaVersion := "2.12.2",
+//     scalaVersion := "2.12.2",
+    scalaVersion := "2.12.20",
 
     name := "scsc",
 
@@ -15,8 +16,8 @@ lazy val root = (project in file("."))
     cancelable in Global := true,
 
     // don't run tests in parallel... nashorn parser gets confused
-    parallelExecution in Test := false,
-    testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-oD"),
+    Test / parallelExecution := false,
+    Test / testOptions += Tests.Argument(TestFrameworks.ScalaTest, "-oD"),
 
     resolvers += Resolver.sonatypeRepo("releases"),
     resolvers += Resolver.sonatypeRepo("snapshots"),
@@ -32,7 +33,12 @@ lazy val root = (project in file("."))
     // Shapeless
     libraryDependencies += "com.chuusai" %% "shapeless" % "2.3.2",
     // Scalaz
-    libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.2.14"
+    libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.2.14",
+    // Nashorn
+//     libraryDependencies += "org.openjdk.nashorn" % "nashorn-core" % "15.6",
+    
+//     scalacOptions ++= Seq("-deprecation"),
+    scalacOptions ++= Seq("-feature", "-unchecked")
   )
 
 /*

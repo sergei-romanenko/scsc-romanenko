@@ -1,5 +1,7 @@
 package sc.js.syntax
 
+import scala.language.implicitConversions
+
 class PP[T <: Trees](t: T) extends sc.imp.syntax.PP(t) {
   import trees._
 

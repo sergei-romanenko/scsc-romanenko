@@ -1,0 +1,17 @@
+{
+    "files.watcherExclude": {
+        "**/target": true
+    },
+    "metals.javaHome": "/usr/lib/jvm/java-8-openjdk-amd64",
+    "metals.serverProperties": [
+        "-Xmx4G",
+        "-XX:+UseZGC",
+        "-XX:ZUncommitDelay=30",
+        "-XX:ZCollectionInterval=5",
+        "-XX:+IgnoreUnrecognizedVMOptions",
+        "-XX:+UseConcMarkSweepGC",
+        "-XX:+CMSClassUnloadingEnabled",
+        "-Xss4M"
+    ]
+
+}
