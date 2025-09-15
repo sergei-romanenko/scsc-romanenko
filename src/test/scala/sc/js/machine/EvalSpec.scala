@@ -1,8 +1,9 @@
 package scsc.js.machine
 
-import org.scalatest._
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class EvalSpec extends FlatSpec with Matchers {
+class EvalSpec extends AnyFlatSpec with Matchers {
   import sc.js.machine.JS._
   import sc.js.machine.Eval
 

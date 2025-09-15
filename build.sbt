@@ -1,8 +1,7 @@
 lazy val root = (project in file("."))
   .dependsOn(jsaiProject)
   .settings(
-//     scalaVersion := "2.12.2",
-    scalaVersion := "2.12.20",
+    scalaVersion := "2.13.16",
 
     name := "scsc",
 
@@ -23,19 +22,18 @@ lazy val root = (project in file("."))
     resolvers += Resolver.sonatypeRepo("snapshots"),
 
     // Testing
-    libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.1",
-    libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test",
+    libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.19",
+    libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.9" % "test",
     // Kiama
-    libraryDependencies += "org.bitbucket.inkytonik.kiama" %% "kiama" % "2.0.0",
+    libraryDependencies += "org.bitbucket.inkytonik.kiama" %% "kiama" % "2.5.1",
+    libraryDependencies += "org.bitbucket.inkytonik.kiama" %% "kiama-extras" % "2.5.1",
     // Logger
     libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.7",
-    libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.5.0",
+    libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5",
     // Shapeless
-    libraryDependencies += "com.chuusai" %% "shapeless" % "2.3.2",
+    libraryDependencies += "com.chuusai" %% "shapeless" % "2.3.13",
     // Scalaz
-    libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.2.14",
-    // Nashorn
-//     libraryDependencies += "org.openjdk.nashorn" % "nashorn-core" % "15.6",
+    libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.3.8",
     
 //     scalacOptions ++= Seq("-deprecation"),
     scalacOptions ++= Seq("-feature", "-unchecked")
@@ -48,4 +46,3 @@ lazy val jsaiProject =
 
 lazy val jsaiProject =
   ProjectRef(file("../jsai-romanenko"), "jsai-romanenko")
-

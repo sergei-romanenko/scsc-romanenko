@@ -80,9 +80,10 @@ trait Stores {
         return σ1
       }
 
-      import scala.collection.mutable.MapBuilder
+      import scala.collection.mutable.Map
 
-      val σnew: MapBuilder[Loc, Closure, Store] = new MapBuilder(σ0)
+      val σnew: Map[Loc, Closure] = Map[Loc, Closure]()
+      σnew ++= σ0
 
       // The paths should be the same.
       // When assigning to a path, need to change all the reachable paths.
@@ -97,7 +98,7 @@ trait Stores {
           }
         }
 
-      σnew.result
+      SortedMap[Loc, Closure]() ++ σnew
     }
 
 /*

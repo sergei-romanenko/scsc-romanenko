@@ -12,6 +12,10 @@
         "-XX:+UseConcMarkSweepGC",
         "-XX:+CMSClassUnloadingEnabled",
         "-Xss4M"
-    ]
+    ],
+    "editor.unicodeHighlight.allowedCharacters": {
+        "σ": true,
+        "ρ": true
+    }
 
 }
